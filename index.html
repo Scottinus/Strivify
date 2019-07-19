@@ -45,23 +45,25 @@
                             <div class="navbar-nav">
                                 <ul>
                                     <li>
-                                        <a class="nav-item nav-link" href="index.html"><i
-                                                class="fas fa-home fa-lg"></i> Home </a>
+                                        <a class="nav-item nav-link" href="index.html"><i class="fas fa-home fa-lg"></i>
+                                            Home </a>
                                     </li>
                                     <li>
-                                        <a class="nav-item nav-link" href="#" onclick="showSearch()"><i class="fas fa-search fa-lg"></i>
+                                        <a class="nav-item nav-link" href="#" onclick="showSearch()"><i
+                                                class="fas fa-search fa-lg"></i>
                                             Search</a>
                                     </li>
                                     <li>
-                                        <a class="nav-item nav-link" href="#" onclick="showLibrary()"><i class="fas fa-book-open fa-lg"></i>
+                                        <a class="nav-item nav-link" href="#" onclick="showLibrary()"><i
+                                                class="fas fa-book-open fa-lg"></i>
                                             Your Library</a>
                                     </li>
                                     <li>
-                                            <a class="nav-item nav-link" href="#" onclick="showAlbum()"><i class="fas fa-bars fa-lg"></i></i>
-                                                Your Albums</a>
-                                        </li>
-                                </ul>
-                            </div>
+                                        <a class="nav-item nav-link" href="#" onclick="showAlbum()"><i class="fas fa-bars fa-lg"></i></i>
+                                            Your Albums</a>
+                                    </li>
+                                    </ul>
+                                    </div>
                         </div>
                     </div>
 
@@ -80,7 +82,7 @@
 
     <!--MAIN-->
     <div class="continer-fluid scrollFlow">
-        <div class="row centering" id ="mainShow">
+        <div class="row centering" id="mainShow">
             <div class="col-10 mainPage">
                 <div class="mainLinks">
                     <a href="#">TRENDING</a>
@@ -89,45 +91,45 @@
                     <a href="#">NEW RELEASES</a>
                     <a href="#">DISCOVER</a>
                 </div>
-                    <!--AGGIUNTI CON HTTP REQUEST-->
-                        <!--creare col-2 text-center-->
-                        <!--creare a href="#"-->
-                        <!--img src, <p>-->
-                            <h3>#Eminem</h3>
-                <div class =" row imgLinks py-3" id = "apiLoaded">
+                <!--AGGIUNTI CON HTTP REQUEST-->
+                <!--creare col-2 text-center-->
+                <!--creare a href="#"-->
+                <!--img src, <p>-->
+                <h2>Created for your Team</h2>
+                <div class=" row imgLinks py-3" id="apiLoaded">
+                            
+                </div>
+                <h2>#Metal</h2>
+                <div class=" row imgLinks py-3" id="apiLoaded2">
 
                 </div>
-                <h3>#Metallica</h3>
-                <div class =" row imgLinks py-3" id = "apiLoaded2">
-
-                </div>
-                <h3>#Nirvana</h3>
-                <div class =" row imgLinks py-3" id = "apiLoaded3">
+                <h2>#Friday</h2>
+                <div class=" row imgLinks py-3" id="apiLoaded3">
 
                 </div>
             </div>
 
         </div>
-            <div class="row centering" id="albumShow">
-                <div class="col-10 albumList">
-                        <h3>Your Albums</h3>
-                        <div class =" row imgLinks py-3" id = "albumList">
-
-                        </div>
+        <div class="row centering" id="albumShow">
+            <div class="col-10 albumList">
+                <h3>Your Albums</h3>
+                <div class=" row imgLinks py-3" id="albumList">
+        
                 </div>
             </div>
-            <div class="row centering" id="searchShow">
-                <div class="col-10 searchList" id="searchResult">
-                        <input type="text" id ="searchBar" placeholder="Search..." name="search" onkeypress="SearchAlbums(event)">
-
-                        <h3>Search Result:</h3>
-                        <div class=" row imgLinks py-3" id ="searchList">
-
-                        </div>
-                    </div>
-            </div>
-
         </div>
+        <div class="row centering" id="searchShow">
+            <div class="col-10 searchList" id="searchResult">
+                <input type="text" id="searchBar" placeholder="Search..." name="search" onkeypress="SearchAlbums(event)">
+        
+                <h3>Search Result:</h3>
+                <div class=" row imgLinks py-3" id="searchList">
+        
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
     <!--END MAIN-->
 
@@ -206,251 +208,240 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        <script>
-        window.onload = function(){
+    <script>
+        
+            var rand = [];
+            var rand2 = [];
+            var rand3 = [];
+      var artMainList=["eminem", "metallica", "alterbridge", "nirvana", "wardruna", "imaginedragons","theheavy","queen"];
+       var metalList= ["askingalexandria"," blessthefall","acrania","piercetheveil","amonamarth"];
+        var fridayList= ["shakira", "snoopdog", "ironmaiden", "queen", "spotify"];
+
+
+        function randomArtists(){
+            console.log(metalList);
+            console.log("rand1 =" + rand);
+      rand = artMainList[Math.floor(Math.random() * artMainList.length)];
+      var index = artMainList.indexOf(rand);
+      if(index > -1){
+          artMainList.splice(index, 1);
+      }
+}
+
+function metalArtists(){
+            console.log(metalList);
+            console.log(rand2);
+
+      rand2 =metalList[Math.floor(Math.random() * metalList.length)];
+      var index2 = metalList.indexOf(rand2);
+      if(index2 > -1){
+          metalList.splice(index2, 1);
+      }
+}
+
+function fridayArtists(){
+            console.log(metalList);
+            console.log(rand2);
+
+      rand3 =fridayList[Math.floor(Math.random() * metalList.length)];
+      var index2 = fridayList.indexOf(rand3);
+      if(index2 > -1){
+          fridayList.splice(index2, 1);
+      }
+}
+
+function generateArtists(){
+    var headers = new Headers({
+                "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+                "X-RapidAPI-Key": "9d408f0366mshab3b0fd8e5ecdf7p1b09f2jsne682a1797fa0"
+            });
+            //FOR TEAM
+            for (var j = 0; j < 4; j++){
+        randomArtists();
+            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + rand, {
+                method: "GET", headers: headers
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                })
+                .then(function (artists) {
+                    var songInfo = artists.data;
+                    var div = document.querySelector("#apiLoaded");
+                    for (var i = 0; i < 1; i++) {
+                        //foreach playlist, we create a new div with title and body
+                        div.innerHTML += `
+              <div class="col-sm-auto col-md-auto  text-center" id=${songInfo[i].id}>
+                    <a href="artist_page.html?id=${songInfo[i].artist.name}">
+                            <img class="img-fluid" src=${songInfo[i].album.cover_medium} alt="1">
+                        </a>
+                            <p>
+                                <a href="album_page.html?id=${songInfo[i].artist.name}">
+                                  album: "${songInfo[i].album.title.length < 16 ? `${songInfo[i].album.title}`:`${songInfo[i].album.title.substring(0,8)}...`}"<br>
+                                 
+                                   </a>
+                                  <a href="artist_page.html?id=${songInfo[i].artist.name}">  
+                                  artist: ${songInfo[i].artist.name}
+                                  </a>
+                                </p>
+                    </div>
+                    `;
+                    }
+                })
+                .catch(function (error) { });            
+    }
+            //RECENTLY
+            for (var j = 0; j < 4; j++){
+        metalArtists();
+            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + rand2, {
+                method: "GET", headers: headers
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                })
+                .then(function (artists) {
+                    var songInfo = artists.data;
+                    var div = document.querySelector("#apiLoaded2");
+                    for (var i = 0; i < 1; i++) {
+                        //foreach playlist, we create a new div with title and body
+                        div.innerHTML += `
+              <div class="col-sm-auto col-md-auto  text-center" id=${songInfo[i].id}>
+                    <a href="artist_page.html?id=${songInfo[i].artist.name}">
+                            <img class="img-fluid" src=${songInfo[i].album.cover_medium} alt="1">
+                        </a>
+                            <p>
+                                <a href="album_page.html?id=${songInfo[i].artist.name}">
+                                  album: "${songInfo[i].album.title.length < 16 ? `${songInfo[i].album.title}`:`${songInfo[i].album.title.substring(0,8)}...`}"<br> </a>
+                                  <a href="artist_page.html?id=${songInfo[i].artist.name}">  
+                                  artist: ${songInfo[i].artist.name}
+                                  </a>
+                                </p>
+                    </div>
+                    `;
+                    }
+                })
+                .catch(function (error) { });            
+    }
+    for (var j = 0; j < 4; j++){
+        fridayArtists();
+            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + rand3, {
+                method: "GET", headers: headers
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                })
+                .then(function (artists) {
+                    var songInfo = artists.data;
+                    var div = document.querySelector("#apiLoaded3");
+                    for (var i = 0; i < 1; i++) {
+                        //foreach playlist, we create a new div with title and body
+                        div.innerHTML += `
+              <div class="col-sm-auto col-md-auto py-5 text-center" id=${songInfo[i].id}>
+                    <a href="artist_page.html?id=${songInfo[i].artist.name}">
+                            <img class="img-fluid" src=${songInfo[i].album.cover_medium} alt="1"> 
+                            </a>
+                            <p>
+                                <a href="album_page.html?id=${songInfo[i].artist.name}">
+                                  album: "${songInfo[i].album.title.length < 16 ? `${songInfo[i].album.title}`:`${songInfo[i].album.title.substring(0,8)}...`}"<br> </a>
+                                  <a href="artist_page.html?id=${songInfo[i].artist.name}}">  
+                                  artist: ${songInfo[i].artist.name}
+                                  </a>
+                                </p>
+
+                    </div>
+                    `;
+                    }
+                })
+                .catch(function (error) { });            
+    }
+}
+
+
+
+
+        window.onload = function () {
+                generateArtists();
+           
+               
+        }
+
+
+        function showSearch() {
+            var mainPage = document.getElementById("mainShow");
+            var albumPage = document.getElementById("albumShow");
+            var searchPage = document.getElementById("searchShow");
+            mainPage.style.display = "none";
+            albumPage.style.display = "none";
+            searchPage.style.display = "block";
+        }
+        function showLibrary() {
+
+            var mainPage = document.getElementById("mainShow");
+            var albumPage = document.getElementById("albumShow");
+            var searchPage = document.getElementById("searchShow");
+            mainPage.style.display = "block";
+            albumPage.style.display = "none";
+            searchPage.style.display = "none";
+        }
+
+        function showAlbum() {
+
+            var mainPage = document.getElementById("mainShow");
+            var albumPage = document.getElementById("albumShow");
+            var searchPage = document.getElementById("searchShow");
+            mainPage.style.display = "none";
+            searchPage.style.display = "none";
+            albumPage.style.display = "block";
+        }
+
+
+        var fetchApi = "";
+
+        function SearchAlbums(e) {
+            var searchName = document.querySelector("#searchResult  h3");
+            var myNode = document.getElementById("searchList");
+            var searchInput = document.getElementById("searchBar").value;
+            var keycode = (e.keyCode ? e.keyCode : e.which);
+            if (event.keyCode === 13) {
+                fetchApi = "";
+                myNode.innerHTML = '';
+                searchName.innerText = "search result: " + searchInput;
+                fetchApi = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + searchInput;
+                console.log(fetchApi);
+                console.log(searchInput);
+                searchResult();
+            }
+        }
+
+        function searchResult() {
 
             var headers = new Headers({
                 "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
                 "X-RapidAPI-Key": "9d408f0366mshab3b0fd8e5ecdf7p1b09f2jsne682a1797fa0"
             });
-            fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            console.log(artists);
-            var songInfo = artists.data;
-            var div = document.querySelector("#apiLoaded");
-            for (var i = 0; i < 5; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-
-                        </a>
-                    </div>
-                    `;
-                    console.log(artists.data[i]);
-            }
-          })
-          .catch(function(error) {});
-          fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            console.log(artists);
-            var songInfo = artists.data;
-            var div = document.querySelector("#apiLoaded2");
-            for (var i = 0; i < 5; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-
-                        </a>
-                    </div>
-                    `;
-                    console.log(artists.data[i]);
-            }
-          })
-          .catch(function(error) {});
-          fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=nirvana", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            console.log(artists);
-            var songInfo = artists.data;
-            var div = document.querySelector("#apiLoaded3");
-            for (var i = 0; i < 5; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-
-                        </a>
-                    </div>
-                    `;
-                    console.log(artists.data[i]);
-            }
-          })
-          fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=imaginedragons", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            console.log(artists);
-            var songInfo = artists.data;
-            var div = document.querySelector("#albumList");
-            for (var i = 0; i < 3; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-                        </a>
-                    </div>
-                    `;
-                    console.log(artists.data[i]);
-            }
-          })
-          fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            var songInfo = artists.data;
-            var div = document.querySelector("#albumList");
-            for (var i = 0; i < 1; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-                        </a>
-                    </div>
-                    `;
-            }
-          })
-          fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=wardruna", {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            var songInfo = artists.data;
-            var div = document.querySelector("#albumList");
-            for (var i = 0; i < 2; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2  text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
-                            <p>
-                                <strong>Title: </strong>${songInfo[i].title_short}<br>
-                                duration: ${songInfo[i].duration}</p>
-                        </a>
-                    </div>
-                    `;
-            }
-          })
-          .catch(function(error) {});
-
-      }
-
-      function showSearch(){
-var mainPage = document.getElementById("mainShow");
-var albumPage= document.getElementById("albumShow");
-var searchPage = document.getElementById("searchShow");
-mainPage.style.display = "none";
-albumPage.style.display = "none";
-searchPage.style.display = "block";
-      }
-      function showLibrary(){
-
-var mainPage = document.getElementById("mainShow");
-var albumPage= document.getElementById("albumShow");
-var searchPage = document.getElementById("searchShow");
-mainPage.style.display = "block";
-albumPage.style.display = "none";
-searchPage.style.display = "none";
-      }
-
-function showAlbum(){
-
-var mainPage = document.getElementById("mainShow");
-var albumPage= document.getElementById("albumShow");
-var searchPage = document.getElementById("searchShow");
-mainPage.style.display = "none";
-searchPage.style.display = "none";
-albumPage.style.display = "block";
-}
-
-
-var fetchApi = "";
-
-function SearchAlbums(e){
-    var searchName = document.querySelector("#searchResult  h3");
-    var myNode = document.getElementById("searchList");
-    var searchInput = document.getElementById("searchBar").value;
-    var keycode = (e.keyCode ? e.keyCode : e.which);
-    if (event.keyCode === 13) {
-        fetchApi = "";
-        myNode.innerHTML = '';
-        searchName.innerText = "search result: " + searchInput;
-       fetchApi = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + searchInput;
-       console.log(fetchApi);
-        console.log(searchInput);
-        searchResult();
-  }
-}
-
-function searchResult(){
-
-    var headers = new Headers({
-                "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-                "X-RapidAPI-Key": "9d408f0366mshab3b0fd8e5ecdf7p1b09f2jsne682a1797fa0"
-            });
             fetch(fetchApi, {
-          method: "GET", headers: headers
-        })
-          .then(function(response) {
-            if (response.ok) {
-              return response.json();
-            }
-          })
-          .then(function(artists) {
-            console.log(artists);
-            var songInfo = artists.data;
-            var div = document.querySelector("#searchList");
-            for (var i = 0; i < songInfo.length; i++) {
-              //foreach playlist, we create a new div with title and body
-              div.innerHTML += `
-              <div class="col-12 col-md-2 text-center" id=${songInfo[i].id}>
-                <a href="#">
-                            <img src=${songInfo[i].album.cover_medium} alt="1" width="150">
+                method: "GET", headers: headers
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                })
+                .then(function (artists) {
+                    console.log(artists);
+                    var songInfo = artists.data;
+                    var div = document.querySelector("#searchList");
+                    for (var i = 0; i < songInfo.length; i++) {
+                        //foreach playlist, we create a new div with title and body
+                        div.innerHTML += `
+              <div class="col-12 col-md-auto text-center" id=${songInfo[i].id}>
+                    <a href="artist_page.html?id=${songInfo[i].artist.name}">
+                            <img class="img-fluid" src=${songInfo[i].album.cover_medium} alt="1">
                             <p>
                                 <strong>Title: </strong>${songInfo[i].title_short}<br>
                                 duration: ${songInfo[i].duration}</p>
@@ -458,13 +449,14 @@ function searchResult(){
                         </a>
                     </div>
                     `;
-                    console.log(artists.data[i]);
-            }
-          })
-          .catch(function(error) {});
-}        
-            
-        </script>
+                        console.log(artists.data[i]);
+                    }
+                })
+                .catch(function (error) { });
+        }
+
+
+    </script>
 
 </body>
 

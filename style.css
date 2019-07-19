@@ -159,11 +159,14 @@ ul{
     padding-left:70px;
     
 }
-.imgLinks a p{
+.imgLinks a p, .mainPage p a{
     padding-top:8px;
     font-size: 12px;
     color:white;
     font-weight:700;
+}
+.mainPage p a:hover{
+    color: rgb(138, 138, 138);
 }
 .imgLinks a:hover{
 
@@ -181,8 +184,8 @@ h2{
     font-weight: 700;
     padding-top:50px;
 }
-.mainPage h3{
-    padding-top:30px;
+.mainPage h2,h1{
+    margin-top:20px;
     padding-left:4.5rem;
     color:white;
     font-weight: 700;
@@ -227,4 +230,64 @@ h2{
     overflow-y: scroll;
     overflow-x: scroll;
     height: 100vh;
+}
+.mainPage img {
+    width: 200px;
+    
+}
+
+
+#imgAlbum1{
+
+    width:100%;
+
+align-content: center;
+
+}
+
+
+
+
+
+.card
+
+{
+
+    margin: 0 auto; /* Added */
+
+        float: none; /* Added */
+
+        margin-bottom: 10px; /* Added */
+
+    width:100%;
+
+    height: 1000px; 
+
+    overflow: hidden;
+
+    background: rgb(46,63,87);
+
+background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33,44,61,1) 42%, rgb(15, 21, 29) 100%);
+
+}
+
+
+
+.trackHover:hover {
+
+  height: 50px;  
+
+  
+
+ background-color:black;
+}
+.trackHover a{
+    text-decoration: none;
+}
+
+
+#btnPlay{
+
+    border-radius: 50x;
+
 }
