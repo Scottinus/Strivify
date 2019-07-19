@@ -298,9 +298,10 @@
 
                        <img id="imgAlbum1"  src="${json.data[0].album.cover}" class="card-img img-fluid" alt="No Image">
 
-                       <div class="mt-4"><p  style="color:white;font-weight:bold; font-size:x-large;">${json.data[0].album.title}</P></div>
+                       <div class="mt-4 text-center"><p  style="color:white;font-weight:bold; font-size:x-large;">${json.data[0].artist.name}</P></div>
+                       <div class="mt-4 text-center"><p  style="color:white;font-weight:bold; font-size:x-large;">${json.data[0].album.title}</P></div>
 
-                        <div class="mt-4 "><button id="btnPlay" class="btn btn-success" type="button">Play</button></div>
+                        <div class="mt-4 text-center"><button id="btnPlay" class="btn btn-success" type="button">Play</button></div>
 
                         `;
 
@@ -328,23 +329,13 @@
 
                                     div2.innerHTML += `
 
-                                  <div class="py-3 trackHover" > <a href="#" class="card-title trackHover" style="color:white" >${Tracks.tracks.data[j].title}</a>
-
+                                  <div class="py-3 trackHover" > <a href="#" class="card-title trackHover px-3" style="color:white" >${Tracks.tracks.data[j].title}</a>
+                                    <small  class="durationClass" style="color:white">${Tracks.tracks.data[j].duration} s</small>
                                 </div>
 
                                     `;
 
                                     trackLIst1.appendChild(div2);
-
-                                    var div3 =document.createElement("div")
-
-                                    div3.innerHTML += `<div class="py-3 ">
-
-                                   <small  style="color:white">${Tracks.tracks.data[j].duration}</small> </div>
-
-                           `;
-
-                                        trackLIst2.appendChild(div3);
 
                                 }
 
